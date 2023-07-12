@@ -10,6 +10,7 @@ public class Main {
         var di = new AnnotationConfigApplicationContext("org.springfromscratch");
 
         var car = di.getBean(Car.class);
+//        car.start();
         System.out.println("Car instance: " + car);
 
         printBeanDefinition(di);
