@@ -14,32 +14,16 @@ public class Car {
         gearBox = new GearBox();
         engine = new Engine();
     }
-    Car(Engine engine, GearBox gearBox) {
-        System.out.println("Car is being instantiated with Engine and GearBox!");
-        this.gearBox = gearBox;
-        this.engine = engine;
-    }
-    @Autowired(required = false)
-    Car(Engine engine) {
-        System.out.println("Car is being instantiated with Engine");
-        this.gearBox = new GearBox();
-        this.engine = engine;
-    }
-    @Autowired(required = false)
-    Car(GearBox gearBox) {
-        System.out.println("Car is being instantiated with GearBox!");
-        this.gearBox = gearBox;
-        this.engine = new Engine();
-    }
 
     @Autowired
     public void setGearBox(GearBox gearBox) {
-        System.out.println("Setting Gearbox");
+        System.out.println("Setting Gearbox from Method");
         this.gearBox = gearBox;
     }
 
     @Autowired
     public void setEngine(Engine engine) {
+        System.out.println("Setting Engine from method!");
         this.engine = engine;
     }
 
